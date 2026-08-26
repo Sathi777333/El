@@ -81,3 +81,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRo
 
 GET http://localhost:3000/api/dashboard
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+
+POST http://localhost:3000/api/auth/forgot-password
+Content-Type: application/json
+
+{
+  "email": "sathish@gmail.com",
+  "newPassword": "987654"
+}
+
+GET https://el-5.onrender.com
