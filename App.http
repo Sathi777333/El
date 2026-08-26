@@ -1,0 +1,83 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Sathish",
+  "email": "sathish@gmail.com",
+  "password": "123456",
+  "role": "employee"
+}
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "sathish@gmail.com",
+  "password": "123456"
+}
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "sathish@gmail.com",
+  "password": "123456"
+}
+
+GET http://localhost:3000/api/employees
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78 
+
+GET http://localhost:3000/api/auth/users
+
+POST http://localhost:3000/api/employees
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+Content-Type: application/json
+
+{
+  "name":"John",
+  "email":"john@gmail.com",
+  "department":"IT",
+  "designation":"Developer"
+}
+
+GET http://localhost:3000/api/employees
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+
+
+PUT http://localhost:3000/api/employees/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+Content-Type: application/json
+
+{
+  "name":"John Updated",
+  "email":"john@gmail.com",
+  "department":"IT",
+  "designation":"Senior Developer"
+}
+
+DELETE http://localhost:3000/api/employees/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+
+POST http://localhost:3000/api/leaves
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+Content-Type: application/json
+
+{
+  "employee_id": 1,
+  "leave_type": "Sick Leave",
+  "reason": "Fever",
+  "start_date": "2026-08-25",
+  "end_date": "2026-08-26"
+}
+
+GET http://localhost:3000/api/leaves
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+
+PUT http://localhost:3000/api/leaves/1/reject
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+
+DELETE http://localhost:3000/api/leaves/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
+
+GET http://localhost:3000/api/dashboard
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYXRoaXNoQGdtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc4NzYzODgyNSwiZXhwIjoxNzg3NzI1MjI1fQ.0kBuaD53LqrpGcKom1YZm0ZAvolLrO8M-ja_RKaKA78
